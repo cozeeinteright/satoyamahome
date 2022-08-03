@@ -40,8 +40,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Run  Static Web Apps CLI 
 
-npm install
-npm run build
+yarn install
+yarn  build
 
 ### Azure Functions Core Tool
 

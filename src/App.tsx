@@ -6,9 +6,12 @@ function App() {
   useEffect(() => {
     (async function () {
       try {
-        const { text } = await( await fetch(`/api/message`)).json();
-        setData(text)
+        const { name } = await( await fetch(`/api/message`)).json();
+        console.log(name)
+        setData(name)
+        console.log("fetch succes")
       } catch(err) {
+        console.log("fetch error")
         console.log(err)
       }
     })();
