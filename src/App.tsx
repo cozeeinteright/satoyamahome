@@ -5,16 +5,20 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = await( await fetch(`/api/message`)).json();
-      setData(text);
+      try {
+        const { text } = await( await fetch(`/api/message`)).json();
+        setData(text)
+      } catch(err) {
+        console.log(err)
+      }
     })();
   });
 
   return (
-    <div>
-      <div>{data}</div>
+    <>
       <div>satoyama</div>
-    </div>
+      <div>{data}</div>;
+    </>
   )
 }
 
