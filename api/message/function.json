@@ -16,5 +16,6 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/message/index.js"
+  "scriptFile": "../dist/message/index.js",
+  "entryPoint": "default"
 }
