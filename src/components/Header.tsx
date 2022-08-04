@@ -3,10 +3,16 @@ import AdUnitsIcon from '@mui/icons-material/AdUnits';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function Header() {
+interface Category {
+  category: String
+}
+
+export default function Header(props: Category) {
+  const sideMenu = props.category === "document"?< MenuIcon fontSize="large" sx={{mr:2}}/>:<></>
   return (
     <>
       <Toolbar sx={{display:'flex'}}>
+        {sideMenu}
         <AdUnitsIcon fontSize="large" sx={{mr:2}}/>
         <Typography variant="body1" sx={{flexGrow: 1}}>里山生物多様性プロジェクト</Typography>
         <GitHubIcon fontSize="large" sx={{mx:1, border: 1, borderRaduios: 2, borderColor: 'primary.main'}} />

@@ -9,7 +9,7 @@ export default function Home() {
       <Container maxWidth="sm">
         <div>Here is Home</div>
         <UserName />
-        <Header />
+        <Header category="home"/>
         <FirstView />
       </Container>
     </>
