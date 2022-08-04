@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders Hello world text', () => {
+test("renders Hello world text", () => {
   render(<App />);
-  const Hello = screen.getByText(/Hello World!/i);
+  const Hello = screen.getByText(/Satoyama Home Page/i);
   expect(Hello).toBeInTheDocument();
 });

@@ -1,4 +1,4 @@
-import UserName from './UserName'
+import UserName from "./UserName";
 
 export default function Home() {
   return (
@@ -6,5 +6,5 @@ export default function Home() {
       <div>Here is Home</div>
       <UserName />
     </>
-  )
+  );
 }
