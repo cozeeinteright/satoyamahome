@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import SignIn from "./components/SignIn";
+import MyDocument from "./components/MyDocument";
 
-function App() {
-  const [data, setData] = useState('');
-
-  useEffect(() => {
-    (async function () {
-      try {
-        const { name } = await( await fetch(`/api/message`)).json();
-        console.log(name)
-        setData(name)
-        console.log("fetch succes")
-      } catch(err) {
-        console.log("fetch error")
-        console.log(err)
-      }
-    })();
-  });
-
+export default function App() {
   return (
     <>
-      <div>satoyama</div>
-      <div>{data}</div>;
+      <div>Satoyama Home Page</div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/document" element={<MyDocument />} />
+      </Routes>
     </>
-  )
+  );
 }
-
-export default App;
