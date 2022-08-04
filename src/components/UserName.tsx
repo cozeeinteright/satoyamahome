@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Home() {
+export default function UserName() {
   const [data, setData] = useState("");
 
   useEffect(() => {
