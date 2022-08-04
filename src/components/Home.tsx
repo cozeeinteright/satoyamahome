@@ -1,10 +1,15 @@
+import { Container } from '@mui/material'
+import Header from './Header'
 import UserName from "./UserName";
 
 export default function Home() {
   return (
     <>
-      <div>Here is Home</div>
-      <UserName />
+      <Container maxWidth="sm">
+        <div>Here is Home</div>
+        <UserName />
+        <Header />
+      </Container>
     </>
   );
 }
